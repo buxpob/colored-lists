@@ -49,8 +49,8 @@ export default {
     list-style: none;
     padding: 20px;
     border: 1px solid black;
-    min-width: 350px;
-    max-width: 450px;
+    min-width: 400px;
+    max-width: 400px;
 }
 
 .list-info {

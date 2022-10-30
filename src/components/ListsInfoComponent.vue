@@ -1,26 +1,26 @@
 <template>
-    <ul class="lists-info">
-      <li class="list-info" v-for="list in lists" :key="list.name">
-        <div class="list-info__block">
-          <h3>{{ list.name }}</h3>
+  <ul class="lists-info">
+    <li class="list-info" v-for="list in lists" :key="list.name">
+      <div class="list-info__block">
+        <h3>{{ list.name }}</h3>
 
-          <button
-            v-show="list.isVisible && list.isOpen"
-            class="list-info__button"
-            type="button"
-            @click="setSort({ listId: list.id, bool: !list.isSort })">
-            {{ list.isSort ? 'Перемешать' : 'Сортировать'}}
-          </button>
+        <button
+          v-show="list.isVisible && list.isOpen"
+          class="list-info__button"
+          type="button"
+          @click="setSort({ listId: list.id, bool: !list.isSort })">
+          {{ list.isSort ? 'Перемешать' : 'Сортировать'}}
+        </button>
 
-        </div>
+      </div>
 
-          <items-info-component
-            :list="list"
-            v-if="list.isOpen && list.isVisible"
-          />
+        <items-info-component
+          :list="list"
+          v-if="list.isOpen && list.isVisible"
+        />
 
-      </li>
-    </ul>
+    </li>
+  </ul>
 </template>
 
 <script>

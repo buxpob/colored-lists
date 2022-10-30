@@ -72,6 +72,7 @@ export default createStore({
       currentList.isVisible = bool;
 
       if (listItems.every((item) => (item.isChecked === false))) {
+        currentList.mixedItems = [];
         listItems.forEach((item) => {
           for (let i = 0; i < item.quantity; i += 1) {
             const element = { color: item.color, id: Math.random() };
